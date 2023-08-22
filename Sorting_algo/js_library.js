@@ -40,7 +40,7 @@ arr.sort(function(a, b) {
 return a - b;
 });
 console.log(arr);
-
+//arr.sort((a,b)=>a-b)
 //내림 차순으로 변경시 b-a 하면된다.
 */
 

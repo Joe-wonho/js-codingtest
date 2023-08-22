@@ -21,10 +21,12 @@
 최대힙 : 값이 큰 원소부터 추출 (루트노드가 최대값임)
 최소힙 : 값이 작은 원소부터 추출 (루트노드가 최소값임)
 
-힙은 삽입 삭제 수행시간이 O(logN)
+힙은 삽입 삭제 수행시간이 O(logN) -- 라이브러리 말고 따로 파일로 구현해보기
 단순한 N개의 데이터를 힙에 넣었다 모두 꺼내는 작업은 정렬과 동일 O(NlogN)
 */
 
+// 최단거리 문제를 풀 때 힙이 필요한 경우에는
+// https://github.com/ndb796/priorityqueuejs  여기서 index.js를 가져와서 아래처럼사용하자
 import PriorityQueue from 'priorityqueuejs';
 
 let queue = new PriorityQueue(function (a, b) {
@@ -38,3 +40,4 @@ console.log(queue.size()); // 3
 console.log(queue.peek()); // { cash: 300, name: 'Jano' }
 console.log(queue.deq()); // { cash: 300, name: 'Jano' }
 console.log(queue.size()); // 2
+console.log(queue.peek());
