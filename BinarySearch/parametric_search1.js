@@ -32,13 +32,16 @@ const sol = (region, arrM, totalM) => {
   let n = region; // 지방의 수(N)
   let arr = arrM; // 각 지방의 예산 요청
   let m = totalM; // 총 예산(M)
-  let start = 1; // 이진 탐색을 위한 시작점(start)과 끝점(end) 설정
+
+  //이진 탐색을 위한 시작점(start)과 끝점(end) 설정 (상한액)
+  // 즉 , 탐색범위는 상한액을 설정하기 위한 것이다.
+  let start = 1;
   let end = arr.reduce((a, b) => Math.max(a, b)); // 배열로 들어온 각 지방 예산 중 최대값
 
   let result = 0;
   while (start <= end) {
     // 이진 탐색 수행(반복문)
-    let mid = parseInt((start + end) / 2); // 현재의 중간점(상한액)
+    let mid = parseInt((start + end) / 2); // 현재의 중간점(상한액=mid)
     let total = 0; // 배정된 예산의 총액 계산
     for (let x of arr) {
       // 각 지방에서 요청한 예산을 하나씩 확인하며
