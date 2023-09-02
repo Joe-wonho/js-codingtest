@@ -63,26 +63,30 @@ function mergeSort(arr, left, right) {
   }
 }
 
-/* 1) 병합 정렬의 수행 시간 측정 */
-// 0부터 999까지의 정수 100000개를 담은 배열 생성
-let arr = Array.from({ length: 100000 }, () => Math.floor(Math.random() * 1000));
-// getTime(): 1970-01-01부터의 시간차를 ms 단위로 계산
-let startTime = new Date().getTime();
-// 임시 정렬 배열(sorted) 정의
-let sorted = Array.from({ length: arr.length }, () => 0);
-mergeSort(arr, 0, arr.length - 1);
-let endTime = new Date().getTime();
-// 시간차 출력
-console.log('병합 정렬 소요 시간:', endTime - startTime, 'ms.');
+let arr5 = [5, 8, 10, -1];
+let sorted = Array.from({ length: arr5.length }, () => 0);
+mergeSort(arr5, 0, arr5.length - 1);
+console.log(arr5);
+// /* 1) 병합 정렬의 수행 시간 측정 */
+// // 0부터 999까지의 정수 100000개를 담은 배열 생성
+// let arr = Array.from({ length: 100000 }, () => Math.floor(Math.random() * 1000));
+// // getTime(): 1970-01-01부터의 시간차를 ms 단위로 계산
+// let startTime = new Date().getTime();
+// // 임시 정렬 배열(sorted) 정의
+// let sorted = Array.from({ length: arr.length }, () => 0);
+// mergeSort(arr, 0, arr.length - 1);
+// let endTime = new Date().getTime();
+// // 시간차 출력
+// console.log('병합 정렬 소요 시간:', endTime - startTime, 'ms.');
 
-/* 2) 이미 정렬된 배열에 대한 병합 정렬의 수행 시간 측정 */
-// 값이 7인 정수 100000개를 담은 배열 생성
-arr = Array.from({ length: 100000 }, () => 7);
-// getTime(): 1970-01-01부터의 시간차를 ms 단위로 계산
-startTime = new Date().getTime();
-// 임시 정렬 배열(sorted) 정의
-sorted = Array.from({ length: arr.length }, () => 0);
-mergeSort(arr, 0, arr.length - 1);
-endTime = new Date().getTime();
-// 시간차 출력
-console.log('정렬된 배열에 대한 병합 정렬 소요 시간:', endTime - startTime, 'ms.');
+// /* 2) 이미 정렬된 배열에 대한 병합 정렬의 수행 시간 측정 */
+// // 값이 7인 정수 100000개를 담은 배열 생성
+// arr = Array.from({ length: 100000 }, () => 7);
+// // getTime(): 1970-01-01부터의 시간차를 ms 단위로 계산
+// startTime = new Date().getTime();
+// // 임시 정렬 배열(sorted) 정의
+// sorted = Array.from({ length: arr.length }, () => 0);
+// mergeSort(arr, 0, arr.length - 1);
+// endTime = new Date().getTime();
+// // 시간차 출력
+// console.log('정렬된 배열에 대한 병합 정렬 소요 시간:', endTime - startTime, 'ms.');

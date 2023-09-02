@@ -7,7 +7,8 @@ class MaxHeap {
     this.heap.push(value);
     let curIndex = this.heap.length - 1; // 1
     let parentIndex = Math.floor(curIndex / 2); // 0
-
+    console.log('curIdx : ' + curIndex);
+    console.log('parentIdx : ' + parentIndex);
     while (parentIndex !== 0 && this.heap[parentIndex] < value) {
       const temp = this.heap[parentIndex];
       this.heap[parentIndex] = value;
