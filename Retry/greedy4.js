@@ -22,8 +22,8 @@ const sol = (io, h) => {
       arrow[x - 1] += 1;
     } else {
       // 해당 높이에 화살이 없다면
-      arrow[x - 1] += 1;
       result += 1; // 화살 쏘기
+      arrow[x - 1] += 1;
     }
   }
   console.log(result);

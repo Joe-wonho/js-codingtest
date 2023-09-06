@@ -11,6 +11,7 @@ const sol = (io) => {
     // 한 자리씩 숫자(digit)를 확인하며
     cnt[Number(x)]++;
   }
+  console.log(cnt);
   let answer = '';
   // 9부터 0까지 하나씩 숫자(digit)를 확인하며
   for (let i = 9; i >= 0; i--) {

@@ -12,7 +12,9 @@ const sol = (io) => {
       z /= 2;
       cnt++;
     } else {
+      console.log(z);
       z = Number(String(z).slice(0, String(z).length - 1));
+      console.log(z);
       if (z === 0 || z < x) {
         return console.log(-1);
       }

@@ -2,29 +2,6 @@
 let io1 = '2 4 -10 4 -9'; // 2 3 0 3 1
 let io2 = '1000 999 1000 999 1000 999'; //1 0 1 0 1 0
 
-const mysol = (io) => {
-  let arr = io.split(' ').map(Number);
-  let setArr = [...new Set(arr)];
-  let answer = [];
-  let str = '';
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-
-    for (let j = 0; j < setArr.length; j++) {
-      if (arr[i] > setArr[j]) count++;
-    }
-    answer.push(count);
-  }
-  console.log(answer);
-  for (let i of answer) {
-    str += i + ' ';
-  }
-  return str;
-};
-
-// console.log(mysol(io1));
-// console.log(mysol(io2));
-
 /** 문제해결 아이디어
 좌표 압축이란, 쉽게 말해 각 값을 크기 순위로 변경하는 것이다.
 배열 [2, 4, -10, 4, -9]를 생각해 보자.
