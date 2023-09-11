@@ -43,11 +43,12 @@ const sol = (region, arrM, totalM) => {
     // 이진 탐색 수행(반복문)
     let mid = parseInt((start + end) / 2); // 현재의 중간점(상한액=mid)
     let total = 0; // 배정된 예산의 총액 계산
+    console.log('start :' + start, 'end :' + end, 'mid :' + mid, 're :' + result);
     for (let x of arr) {
       // 각 지방에서 요청한 예산을 하나씩 확인하며
       total += Math.min(mid, x); // 예산 배정
     }
-    console.log(total);
+    console.log('total :', total, 'm :', m);
     // 지방 모든 예산  < = 예산총액
     if (total <= m) {
       // 조건을 만족한다면, 상한액(최대화가 목표)을 증가시키기
@@ -57,7 +58,6 @@ const sol = (region, arrM, totalM) => {
       // 조건을 만족하지 못한다면, 상한액을 감소시키기
       end = mid - 1;
     }
-    console.log(start, end, mid, result);
   }
   console.log(result);
 };
